@@ -1,0 +1,64 @@
+<div class="headerContainer">
+    <div class="secondaryHeaderContainer">
+        <div class="title">
+            //TODO
+        </div>
+    </div>
+    <div class="secondaryHeaderContainer">
+        <div class="rightButtonsContainer">
+            <div routerLink="" class="home">
+                Home
+            </div>
+            <div class="about" (mousedown)="onClickAbout()">
+                About
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="aboutSection" [@expandAbout]="aboutSectionState">
+    <div class="aboutText">
+        <p>
+            This is a showcase of an easy to use Reminder-like app. Users can create reminders, check the ones they have
+            completed or fulfilled.
+        </p>
+
+        <p>
+        </p>
+
+        <div>
+            User can use this app in two ways:
+        </div>
+
+        <div class="indentedText">
+            Anonymous: This way the reminders will be reset upon leaving or resetting the page.
+        </div>
+
+        <div class="indentedText">
+            Sign in: This way the reminders are stored in a database so they can be accessed anytime, anywhere.
+        </div>
+
+        <p>
+            Here are the operations for account management:
+        </p>
+
+        @if (authService.userIsSignedIn) {
+            <p>
+                You are signed in as: {{ authService.userEmail }}
+            </p>
+        }
+        <div class="accountButtonContainer">
+            @if (!authService.userIsSignedIn) {
+                <button (mousedown)="onClickSignIn()">
+                    Sign in with Google
+                </button>
+            } @else {
+                <div>
+                    <button (mousedown)="onClickSignOut()">
+                        Sign out
+                    </button>
+                </div>
+            }
+        </div>
+    </div>
+</div>

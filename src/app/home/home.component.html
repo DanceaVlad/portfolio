@@ -1,0 +1,64 @@
+<div class="mainContainer">
+    <div class="textContainer" [style.font-size]="textSize" (mousedown)="onClickMainText()">
+        <div class="secondaryTextContainer">
+            <div class="name">
+                Vlad Dancea
+            </div>
+        </div>
+    </div>
+    <div class="colorsContainer">
+        <div class="darkBlue" (mousedown)="onClick('darkBlue')" [style.width]="stripWidths['darkBlue']">
+            <div class="sideways-text" [style]="stripTextTransform['darkBlue']"
+                 [style.font-size]="stripFontSizes['darkBlue']">
+                Project 1
+            </div>
+            @if (stripDescriptionVisibility['darkBlue'] == 'visible') {
+                <div>
+                    <a routerLink="/todo" class="darkBlueCheck"> Check it out</a>
+                </div>
+            }
+        </div>
+        <div class="lila" (mousedown)="onClick('lila')" [style.width]="stripWidths['lila']">
+            <div class="sideways-text" [style]="stripTextTransform['lila']" [style.font-size]="stripFontSizes['lila']">
+                Project 2
+            </div>
+            @if (stripDescriptionVisibility['lila'] == 'visible') {
+                <div>
+                    <a class="lilaCheck"> Check it out</a>
+                </div>
+            }
+        </div>
+        <div class="pink" (mousedown)="onClick('pink')" [style.width]="stripWidths['pink']">
+            <div class="sideways-text" [style]="stripTextTransform['pink']" [style.font-size]="stripFontSizes['pink']">
+                Project 3
+            </div>
+            @if (stripDescriptionVisibility['pink'] == 'visible') {
+                <div>
+                    <a class="pinkCheck"> Check it out</a>
+                </div>
+            }
+        </div>
+        <div class="salmon" (mousedown)="onClick('salmon')" [style.width]="stripWidths['salmon']">
+            <div class="sideways-text" [style]="stripTextTransform['salmon']"
+                 [style.font-size]="stripFontSizes['salmon']">
+                Project 4
+            </div>
+            @if (stripDescriptionVisibility['salmon'] == 'visible') {
+                <div>
+                    <a class="salmonCheck"> Check it out</a>
+                </div>
+            }
+        </div>
+        <div class="peach" (mousedown)="onClick('peach')" [style.width]="stripWidths['peach']">
+            <div class="sideways-text" [style]="stripTextTransform['peach']"
+                 [style.font-size]="stripFontSizes['peach']">
+                Project 5
+            </div>
+            @if (stripDescriptionVisibility['peach'] == 'visible') {
+                <div>
+                    <a class="peachCheck"> Check it out</a>
+                </div>
+            }
+        </div>
+    </div>
+</div>

@@ -1,0 +1,73 @@
+@import "../../../variables.scss";
+
+.headerContainer {
+    font-family: "Audiowide", sans-serif;
+    color: $peach;
+    width: 100vw;
+    background-color: $dark-blue;
+    height: 7vh;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.secondaryHeaderContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.title {
+    position: relative;
+    font-size: 4.5vh;
+    margin-left: 2vh;
+}
+
+.rightButtonsContainer {
+    display: flex;
+    justify-content: center;
+    margin-right: 2vh;
+    font-size: 3vh;
+}
+
+.rightButtonsContainer > div {
+    cursor: pointer;
+}
+
+.rightButtonsContainer > div:last-child {
+    margin-left: 2vh;
+}
+
+.aboutSection {
+    width: 100vw;
+    background-color: $dark-blue;
+    overflow: hidden;
+    transition: height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.aboutText {
+    padding-right: max(15vw, 100px);
+    padding-left: max(15vw, 100px);
+    color: $peach;
+    font-size: 2.5vw;
+    font-family: sans-serif;
+}
+
+.indentedText {
+    margin-left: max(2vw, 25px);
+}
+
+.indentedText {
+    margin-top: max(0.5vw, 10px);
+}
+
+.accountButtonContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 2vw;
+}
+
+
+

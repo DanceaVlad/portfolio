@@ -1,0 +1,121 @@
+@import "../../variables.scss";
+
+
+.mainContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    font-family: "Audiowide", sans-serif;
+}
+
+.textContainer {
+    display: flex;
+    width: 70vw;
+    height: 100vh;
+    justify-content: center;
+    align-content: center;
+    box-sizing: border-box;
+    transition: font-size 0.2s ease-in-out;
+}
+
+
+.secondaryTextContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.colorsContainer {
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+}
+
+.colorsContainer > div {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: width 0.2s ease-in-out;
+}
+
+.colorsContainer > div > div:nth-child(2):hover {
+    cursor: pointer;
+}
+
+
+.sideways-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-family: "Audiowide", sans-serif;
+    transition: font-size 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.darkBlue {
+    position: relative;
+    background-color: $dark-blue;
+    color: $peach;
+}
+
+.darkBlueCheck {
+    all: unset;
+    color: $peach;
+    font-size: 4vw;
+}
+
+.lila {
+    position: relative;
+    background-color: $lila;
+    color: $salmon;
+}
+
+.lilaCheck {
+    color: $salmon;
+    font-size: 4vw;
+}
+
+.pink {
+    position: relative;
+    background-color: $pink;
+    color: white;
+}
+
+.pinkCheck {
+    color: white;
+    font-size: 4vw;
+}
+
+.salmon {
+    position: relative;
+    background-color: $salmon;
+    color: $lila;
+}
+
+.salmonCheck {
+    color: $lila;
+    font-size: 4vw;
+}
+
+.peach {
+    position: relative;
+    background-color: $peach;
+    color: $dark-blue;
+}
+
+.peachCheck {
+    color: $dark-blue;
+    font-size: 4vw;
+}
+
+
